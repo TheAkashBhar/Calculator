@@ -1,0 +1,78 @@
+/* Spacing technique
+4
+8
+16
+24
+32
+
+small gap    → 8px
+normal gap   → 16px
+large gap    → 24px
+section gap  → 32px
+
+calculator padding → 16px
+display spacing    → 16px
+button gap         → 12px / 16px
+
+*/
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 15px;
+    background-color: #5C7057;
+}
+
+.display {
+    margin-top: 8px;
+}
+
+.input {
+    width: 100%;
+    height: 50px;
+    padding: 8px;
+    font-size: 15px;
+    text-align: right;
+    border-radius: 12px;
+    border: 1px solid black;
+    background-color: #89A482;
+    color: white;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.btn {
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 16px;
+    background-color: #ACC5A6;
+    transition: transform 0.2s ease;
+    box-shadow: 4px 4px 6px rgb(0, 0, 0 , 0.2);
+}
+
+.btn:hover{
+    transform: translateY(-4px);
+    box-shadow: 4px 4px 1px rgb(0, 0, 0 , 0.2);
+    cursor: pointer;
+}
